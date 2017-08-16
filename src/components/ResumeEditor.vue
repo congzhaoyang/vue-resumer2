@@ -13,5 +13,6 @@ export default {
 <style>
   #ResumerEditor {
     color: blue;
+    border: 1px solid yellow;
   }
 </style>

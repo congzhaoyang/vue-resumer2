@@ -1,10 +1,12 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <router-view></router-view>
-      <Topbar/>
-      <ResumerEditor/>
-      <ResumerPreview/>
+    <header>
+      <Topbar></Topbar>
+    </header>
+    <div class="main">
+      <ResumerEditor></ResumerEditor>
+      <ResumerPreview></ResumerPreview>
+    </div>
   </div>
 </template>
 
@@ -12,6 +14,7 @@
 import Topbar from './components/Topbar'
 import ResumerEditor from './components/ResumeEditor'
 import ResumerPreview from './components/ResumePreview'
+import 'normalize.css'
 
 export default {
   name: 'app',
@@ -21,13 +24,34 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  width: 1220px;
+  height: 100vh;
+  background: #EDEDED;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  header {
+    #Topbar {
+      background: #DDDDDD;
+      height: 64px;
+      width: 100%;
+    }
+  }
+  .main {
+    flex-grow: 1;
+    border: 1px solid red;
+    display: flex;
+    margin-top: 16px;
+    #ResumerEditor {
+      width: 36%;
+      margin-right: 8px;
+    }
+    #ResumerPreview {
+      flex: 1;
+      margin-left: 8px;
+    }
+  }
 }
 </style>

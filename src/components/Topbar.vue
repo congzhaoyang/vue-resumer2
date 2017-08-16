@@ -12,6 +12,6 @@
 
 <style>
   #Topbar {
-    background: #DDDDDD;
+
   }
 </style>

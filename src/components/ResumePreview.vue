@@ -13,5 +13,6 @@
 <style>
   #ResumerPreview {
     color: purple;
+    border: 1px solid green;
   }
 </style>
